@@ -1,6 +1,7 @@
 package com.company;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -25,19 +26,19 @@ public class GameTest {
 //        assertTrue(display.wasProcessMarkCalled);
 //    }
 
-    @Test
-    public void knowsWhenTheGameIsOverDueToDraw() {
-        board.setADraw(true);
-        game.run(display, board);
-        assertTrue(game.isOver(board));
-    }
-
-    @Test
-    public void knowsWhenTheGameIsOverDueToWinCondition() {
-        board.setHasAWinner(true);
-        game.run(display, board);
-        assertTrue(game.isOver(board));
-    }
+//    @Test
+//    public void knowsWhenTheGameIsOverDueToDraw() {
+//        board.setADraw(true);
+//        game.run(display, board);
+//        assertTrue(game.isOver(board));
+//    }
+//
+//    @Test
+//    public void knowsWhenTheGameIsOverDueToWinCondition() {
+//        board.setHasAWinner(true);
+//        game.run(display, board);
+//        assertTrue(game.isOver(board));
+//    }
 
     @Test
     public void gameWillCallDrawGameOverStatement() {
@@ -52,4 +53,10 @@ public class GameTest {
         game.run(display, board);
         assertTrue(display.wasAnnounceWinCalled);
     }
+
+
+    //Rules:
+    //A game knows when someone won, draw and announces that
+
+
 }

@@ -11,15 +11,15 @@ public class BoardSpy extends Board {
         wasMarkCalled = true;
     }
 
-    @Override
-    public boolean hasAWinner() {
-        return hasAWinner;
-    }
+//    @Override
+//    public boolean hasAWinner() {
+//        return hasAWinner;
+//    }
 
-    @Override
-    public boolean isADraw() {
-        return isADraw;
-    }
+//    @Override
+//    public boolean isADraw() {
+//        return isADraw;
+//    }
 
     public void setADraw(boolean isADraw) {
         this.isADraw = isADraw;

@@ -4,14 +4,13 @@ public class Game {
 
     public void run(Display display, Board board) {
         Character mark = 'O';
-        while (!isOver(board)) {
+        for (int i=0;i<9;i++) {
             mark = swapMarks(mark);
             display.showBoard(board);
             display.processMark(board, mark);
 
         }
         display.showBoard(board);
-        announceGameOver(board, display);
     }
 
     private Character swapMarks(Character mark) {
@@ -23,16 +22,6 @@ public class Game {
         return mark;
     }
 
-    public boolean isOver(Board board) {
-        return (board.hasAWinner() || board.isADraw());
-    }
 
-    private void announceGameOver(Board board, Display display) {
-        if (board.isADraw()) {
-            display.announceDraw();
-        } else if (board.hasAWinner()) {
-            display.announceWinner(board);
-        }
-    }
 
 }

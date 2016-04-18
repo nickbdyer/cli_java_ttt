@@ -28,27 +28,6 @@ public class Board {
         return Character.isDigit(cells.get(position));
     }
 
-    public boolean hasAWinner() {
-        return new Lines(cells).hasAWinner();
-    }
 
-    public boolean isFull() {
-        for(int i=1;i<cells.size();i++) {
-            if (isCellEmpty(i)) {
-                return false;
-            }
-        }
-        return true;
-    }
 
-    public boolean isADraw() {
-        if (isFull() && !hasAWinner()) {
-            return true;
-        }
-        return false;
-    }
-
-    public char getWinningMark() {
-        return new Lines(cells).getWinningMark();
-    }
 }

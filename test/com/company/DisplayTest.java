@@ -77,33 +77,33 @@ public class DisplayTest {
         assertEquals(Arrays.asList('X', 'O', '3', '4', '5', '6', '7', '8', '9'), board.showCells());
     }
 
-    @Test
-    public void willShowWinningMessageX() {
-        Board board = new Board();
-        createMockUserInput("1 4 2 5 3");
-        display.processMark(board, 'X');
-        display.processMark(board, 'O');
-        display.processMark(board, 'X');
-        display.processMark(board, 'O');
-        display.processMark(board, 'X');
-        sc.close();
-        display.announceWinner(board);
-        assertThat(outContent.toString(), containsString("X has won!"));
-    }
-
-    @Test
-    public void willShowWinningMessageO() {
-        Board board = new Board();
-        createMockUserInput("1 4 2 5 3");
-        display.processMark(board, 'O');
-        display.processMark(board, 'X');
-        display.processMark(board, 'O');
-        display.processMark(board, 'X');
-        display.processMark(board, 'O');
-        sc.close();
-        display.announceWinner(board);
-        assertThat(outContent.toString(), containsString("O has won!"));
-    }
+//    @Test
+//    public void willShowWinningMessageX() {
+//        Board board = new Board();
+//        createMockUserInput("1 4 2 5 3");
+//        display.processMark(board, 'X');
+//        display.processMark(board, 'O');
+//        display.processMark(board, 'X');
+//        display.processMark(board, 'O');
+//        display.processMark(board, 'X');
+//        sc.close();
+//        display.announceWinner(board);
+//        assertThat(outContent.toString(), containsString("X has won!"));
+//    }
+//
+//    @Test
+//    public void willShowWinningMessageO() {
+//        Board board = new Board();
+//        createMockUserInput("1 4 2 5 3");
+//        display.processMark(board, 'O');
+//        display.processMark(board, 'X');
+//        display.processMark(board, 'O');
+//        display.processMark(board, 'X');
+//        display.processMark(board, 'O');
+//        sc.close();
+//        display.announceWinner(board);
+//        assertThat(outContent.toString(), containsString("O has won!"));
+//    }
 
     @Test
     public void willShowDrawMessage() {

@@ -21,10 +21,10 @@ public class DisplaySpy extends Display {
         wasProcessMarkCalled = true;
     }
 
-    @Override
-    public void announceWinner(Board board) {
-        wasAnnounceWinCalled = true;
-    }
+//    @Override
+//    public void announceWinner(Board board) {
+//        wasAnnounceWinCalled = true;
+//    }
 
     @Override
     public void announceDraw() {
