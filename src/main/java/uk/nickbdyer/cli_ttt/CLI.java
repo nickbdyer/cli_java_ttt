@@ -2,6 +2,7 @@ package uk.nickbdyer.cli_ttt;
 
 import uk.nickbdyer.tictactoe.Board;
 import uk.nickbdyer.tictactoe.GameType;
+import uk.nickbdyer.tictactoe.UserInterface;
 
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -24,6 +25,7 @@ public class CLI implements UserInterface {
     }
 
     public int getNumber() {
+        displayMoveInstructions();
         while (!input.hasNextInt()) {
             displayInvalidInput();
             input.next();
