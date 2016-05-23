@@ -7,16 +7,16 @@ public class GameEngine {
     private Game game;
     private Board board;
 
-    public void start(CLI ui) {
-        game = new Game(new PlayerFactory().create(ui.makeGameChoice(), ui));
+    public void start(UserInterface ui) {
+        game = new Game(new PlayerFactory().create(ui.makeGameChoice()));
         board = new Board();
         while (!game.isOver(board)) {
-            game.promptTurn(board, ui);
+            game.takeTurn(board, ui);
         }
         endGame(ui);
     }
 
-    private void endGame(CLI ui) {
+    private void endGame(UserInterface ui) {
         game.endGame(board, ui);
         gameRestart(ui);
     }

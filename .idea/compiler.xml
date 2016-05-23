@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cli_java_ttt_main" target="1.8" />
+      <module name="cli_java_ttt_test" target="1.8" />
       <module name="java_ttt_main" target="1.8" />
       <module name="java_ttt_test" target="1.8" />
     </bytecodeTargetLevel>
