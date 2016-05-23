@@ -1,7 +1,8 @@
-package uk.nickbdyer.tictactoe;
+package uk.nickbdyer.cli_ttt;
 
 import org.junit.Before;
 import org.junit.Test;
+import uk.nickbdyer.tictactoe.Board;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

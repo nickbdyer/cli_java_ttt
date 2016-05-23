@@ -1,5 +1,8 @@
-package uk.nickbdyer.tictactoe;
+package uk.nickbdyer.cli_ttt;
 
+import uk.nickbdyer.tictactoe.Board;
+import uk.nickbdyer.tictactoe.Game;
+import uk.nickbdyer.tictactoe.GameType;
 import uk.nickbdyer.tictactoe.players.PlayerFactory;
 import org.junit.Before;
 import org.junit.Test;

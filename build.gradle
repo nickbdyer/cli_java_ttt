@@ -6,13 +6,13 @@ plugins {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'uk.nickbdyer.tictactoe.Main'
+        attributes 'Main-Class': 'uk.nickbdyer.cli_ttt.Main'
     }
 }
 
 apply plugin: 'application'
 
-mainClassName = "uk.nickbdyer.tictactoe.Main"
+mainClassName = "uk.nickbdyer.cli_ttt.Main"
 
 run {
     standardInput = System.in

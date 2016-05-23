@@ -1,5 +1,7 @@
-package uk.nickbdyer.tictactoe;
+package uk.nickbdyer.cli_ttt;
 
+import uk.nickbdyer.tictactoe.Board;
+import uk.nickbdyer.tictactoe.Game;
 import uk.nickbdyer.tictactoe.players.PlayerFactory;
 
 public class GameEngine {
@@ -11,17 +13,23 @@ public class GameEngine {
         game = new Game(new PlayerFactory().create(ui.makeGameChoice()));
         board = new Board();
         while (!game.isOver(board)) {
-            game.takeTurn(board, ui);
+            int position = game.getCurrentPlayer().choosePosition(board);
+            game.takeTurn(board, position);
         }
-        endGame(ui);
+        endGame(board, ui);
     }
 
-    private void endGame(UserInterface ui) {
-        game.endGame(board, ui);
+    public void endGame(Board board, UserInterface ui) {
+        ui.displayBoard(board);
+        if (board.isDraw()) {
+            ui.displayDraw();
+        } else {
+            ui.displayWinner(board);
+        }
         gameRestart(ui);
     }
 
-    private void gameRestart(CLI ui) {
+    private void gameRestart(UserInterface ui) {
         ui.displayReplayQuery();
         if ("y".equals(ui.getYorN())) {
             ui.displayResetNotice();

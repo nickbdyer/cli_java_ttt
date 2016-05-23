@@ -1,4 +1,4 @@
-package uk.nickbdyer.tictactoe;
+package uk.nickbdyer.cli_ttt;
 
 import org.junit.Test;
 
