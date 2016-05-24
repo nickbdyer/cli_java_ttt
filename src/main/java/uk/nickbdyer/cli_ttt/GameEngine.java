@@ -7,11 +7,10 @@ import uk.nickbdyer.tictactoe.players.PlayerFactory;
 public class GameEngine {
 
     private Game game;
-    private Board board;
 
     public void start(CLI ui) {
         game = new Game(new PlayerFactory(ui).create(ui.makeGameChoice()));
-        board = new Board();
+        Board board = new Board();
         while (!game.isOver(board)) {
             ui.displayBoard(board);
             int position = getValidPosition(board, ui);
