@@ -25,7 +25,6 @@ public class CLI implements UserInterface {
     }
 
     public int getNumber() {
-        displayMoveInstructions();
         while (!input.hasNextInt()) {
             displayInvalidInput();
             input.next();

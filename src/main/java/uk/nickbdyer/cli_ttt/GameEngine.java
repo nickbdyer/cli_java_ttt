@@ -13,6 +13,7 @@ public class GameEngine {
         game = new Game(new PlayerFactory(ui).create(ui.makeGameChoice()));
         board = new Board();
         while (!game.isOver(board)) {
+            ui.displayBoard(board);
             int position = getValidPosition(board, ui);
             game.takeTurn(board, position);
         }
@@ -20,6 +21,7 @@ public class GameEngine {
     }
 
     private int getValidPosition(Board board, CLI ui) {
+        ui.displayMoveInstructions();
         int position = game.getCurrentPlayer().choosePosition(board);
         while (!board.availableMoves().contains(position)) {
             ui.displayInvalidPosition();
